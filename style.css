@@ -9,13 +9,13 @@ body {
 
 /* ส่วนที่เพิ่มใหม่สำหรับ Header และ Project Info */
 header {
-    background-color: #007bff; /* พื้นหลังสีน้ำเงิน */
+    background-color: #007bff; 
     color: white;
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between; /* จัด h1 และ project-info ให้อยู่ซ้าย-ขวา */
+    justify-content: space-between; /* จัดให้อยู่ซ้าย-ขวา */
     align-items: center; 
     padding: 10px 20px;
 }
@@ -30,7 +30,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    text-align: left; 
+    text-align: left; /* จัดชิดซ้าย */
 }
 
 /* ตกแต่งเมนูนำทาง (Navigation) หลัก */
@@ -40,7 +40,7 @@ nav ul {
     margin: 0;
     display: flex; 
     justify-content: center; 
-    background-color: #0056b3; 
+    background-color: #0056b3; /* ทำให้เมนูนำทางมีสีเข้มขึ้นเล็กน้อย */
 }
 
 nav li {
@@ -52,12 +52,13 @@ nav a {
     text-decoration: none; 
     font-weight: bold;
     padding: 10px 15px;
-    display: block; 
+    display: block; /* ทำให้ลิงก์เต็มพื้นที่ li */
     transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: #003e80; 
+    border-radius: 0; /* ลบมุมโค้งมนที่เคยใส่ไว้ */
 }
 
 /* ส่วนของ Dropdown Menu (สำหรับภาษาต่างประเทศ) */
@@ -72,14 +73,14 @@ nav a:hover {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 10; 
+    z-index: 10; /* ให้เมนูแสดงอยู่เหนือองค์ประกอบอื่น */
     border-radius: 5px;
     top: 100%; 
     left: 0;
 }
 
 .dropdown-content a {
-    /* **แก้ไขสีตัวอักษรเป็นสีดำ เพื่อให้มองเห็นชัดเจนบนพื้นหลังสีขาวอ่อน** */
+    /* **แก้สีตัวอักษรเป็นสีดำเพื่อให้มองเห็นชัดเจนบนพื้นหลังสีขาวอ่อน** */
     color: black; 
     padding: 12px 16px;
     text-decoration: none;
