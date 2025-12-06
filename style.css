@@ -3,34 +3,35 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; 
-    color: #333; 
+    background-color: #f0f0f0; /* พื้นหลังสีเทาอ่อน */
+    color: #333; /* สีตัวอักษรหลัก */
 }
 
 /* ส่วนที่เพิ่มใหม่สำหรับ Header และ Project Info */
 header {
-    background-color: #007bff; 
+    background-color: #007bff; /* พื้นหลังสีน้ำเงิน */
     color: white;
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between; /* จัดให้อยู่ซ้าย-ขวา */
+    justify-content: space-between; /* จัด h1 และ project-info ให้อยู่ซ้าย-ขวา */
     align-items: center; 
     padding: 10px 20px;
 }
 
+/* **โค้ดที่แก้ไข** */
 .project-info {
-    color: #28a745; /* สีเขียวตามที่คุณต้องการ */
+    color: black; /* เปลี่ยนจาก #28a745 (สีเขียว) เป็น สีดำ */
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.25em; /* เพิ่มขนาดตัวอักษรให้ใหญ่ขึ้นเล็กน้อย (เดิม 1.1em) */
 }
 
 /* ปรับตำแหน่ง h1 ใน header ใหม่ */
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    text-align: left; /* จัดชิดซ้าย */
+    text-align: left; 
 }
 
 /* ตกแต่งเมนูนำทาง (Navigation) หลัก */
@@ -40,7 +41,7 @@ nav ul {
     margin: 0;
     display: flex; 
     justify-content: center; 
-    background-color: #0056b3; /* ทำให้เมนูนำทางมีสีเข้มขึ้นเล็กน้อย */
+    background-color: #0056b3; 
 }
 
 nav li {
@@ -52,13 +53,12 @@ nav a {
     text-decoration: none; 
     font-weight: bold;
     padding: 10px 15px;
-    display: block; /* ทำให้ลิงก์เต็มพื้นที่ li */
+    display: block; 
     transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: #003e80; 
-    border-radius: 0; /* ลบมุมโค้งมนที่เคยใส่ไว้ */
 }
 
 /* ส่วนของ Dropdown Menu (สำหรับภาษาต่างประเทศ) */
@@ -73,15 +73,14 @@ nav a:hover {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 10; /* ให้เมนูแสดงอยู่เหนือองค์ประกอบอื่น */
+    z-index: 10; 
     border-radius: 5px;
     top: 100%; 
     left: 0;
 }
 
 .dropdown-content a {
-    /* **แก้สีตัวอักษรเป็นสีดำเพื่อให้มองเห็นชัดเจนบนพื้นหลังสีขาวอ่อน** */
-    color: black; 
+    color: black; /* สีตัวอักษรเป็นสีดำ */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
