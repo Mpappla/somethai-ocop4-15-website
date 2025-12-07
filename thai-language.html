@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* สไตล์เพิ่มเติมสำหรับหน้ากลอน (เพื่อให้กลอนเด่นและสบายตา) */
+        /* สไตล์เดิมสำหรับหน้ากลอน (เพื่อให้กลอนเด่นและสบายตา) */
         .poetry-container {
             padding: 30px;
-            background-color: #fffaf0; /* สีครีม/งาช้างอ่อนๆ */
-            border-left: 5px solid #007bff; /* แถบสีน้ำเงินด้านซ้าย */
+            background-color: #fffaf0; 
+            border-left: 5px solid #007bff; 
             margin: 20px auto;
             max-width: 800px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -24,13 +24,44 @@
         }
         blockquote {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 1.4em; /* ตัวใหญ่ขึ้น */
-            line-height: 1.8; /* เว้นบรรทัดให้ห่าง อ่านง่าย */
-            text-align: center; /* จัดกึ่งกลาง */
+            font-size: 1.4em; 
+            line-height: 1.8; 
+            text-align: center; 
             color: #333;
             margin: 0;
             padding: 10px 0;
-            white-space: pre-wrap; /* รักษารูปแบบการขึ้นบรรทัดใหม่ตามที่พิมพ์ */
+            white-space: pre-wrap; 
+        }
+
+        /* **สไตล์ใหม่สำหรับตารางคำศัพท์** */
+        .vocab-table {
+            width: 100%;
+            max-width: 850px; /* จำกัดความกว้างเพื่อให้อ่านง่าย */
+            margin: 30px auto;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 1.1em;
+        }
+        .vocab-table th, .vocab-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+        .vocab-table th {
+            background-color: #f8f8f8;
+            color: #007bff;
+            font-weight: bold;
+            text-align: center;
+        }
+        .vocab-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .error-col {
+            color: #dc3545; /* สีแดงสำหรับคำผิด */
+            font-style: italic;
+        }
+        .correct-col {
+            color: #28a745; /* สีเขียวสำหรับคำถูก */
+            font-weight: bold;
         }
     </style>
 
@@ -84,6 +115,57 @@
                 </blockquote>
             </div>
             
+        </section>
+
+        <section>
+            <h2 style="text-align: center;">คำศัพท์ที่ถูกต้อง (เมนูอาหาร)</h2>
+            <p style="text-align: center; color: #555;">
+                ความละเอียดอ่อนในการสะกดคำตามหลักภาษาไทย เป็นสิ่งสำคัญในการสื่อสารความหมายของชื่อเมนูอาหารมงคล
+            </p>
+
+            <table class="vocab-table">
+                <thead>
+                    <tr>
+                        <th style="width: 45%;">สะกดผิด ❌</th>
+                        <th style="width: 45%;">สะกดถูก ✅</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="error-col">สปาเก็ตตี้รากทองคำตี้โซม ❌</td>
+                        <td class="correct-col">สปาเก็ตตี้รากทองคำตี้โสม ✅</td>
+                    </tr>
+                    <tr>
+                        <td class="error-col">สลัดเขียวขจีมีพัลง ❌</td>
+                        <td class="correct-col">สลัดเขียวขจีมีพลัง ✅</td>
+                    </tr>
+                    <tr>
+                        <td class="error-col">ไข่อุ่นไอพัลลัง ❌</td>
+                        <td class="correct-col">ไข่อุ่นไอพลัง ✅</td>
+                    </tr>
+                    <tr>
+                        <td class="error-col">ลาบปลามงคน ❌</td>
+                        <td class="correct-col">ลาบปลามงคล ✅</td>
+                    </tr>
+                    <tr>
+                        <td class="error-col">ไข่เจียวมนีโซม ❌</td>
+                        <td class="correct-col">ไข่เจียวมณีโสม ✅</td>
+                    </tr>
+                    <tr>
+                        <td class="error-col">ผัดบำลุงขวัน ❌</td>
+                        <td class="correct-col">ผัดบำรุงขวัญ ✅</td>
+                    </tr>
+                    <tr>
+                        <td class="error-col">ซุบชีวิดชีว้า ❌</td>
+                        <td class="correct-col">ซุปชีวิตชีวา ✅</td>
+                    </tr>
+                    <tr>
+                        <td class="error-col">ขนมครกเทพนิมิด ❌</td>
+                        <td class="correct-col">ขนมครกเทพนิมิต ✅</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
     </main>
 
