@@ -20,11 +20,11 @@ header {
     padding: 10px 20px;
 }
 
-/* **โค้ดที่แก้ไข** */
+/* **โค้ดที่แก้ไข (ตามที่คุณร้องขอ: สีดำและตัวใหญ่ขึ้น)** */
 .project-info {
-    color: black; /* เปลี่ยนจาก #28a745 (สีเขียว) เป็น สีดำ */
+    color: black; 
     font-weight: bold;
-    font-size: 1.25em; /* เพิ่มขนาดตัวอักษรให้ใหญ่ขึ้นเล็กน้อย (เดิม 1.1em) */
+    font-size: 1.25em; 
 }
 
 /* ปรับตำแหน่ง h1 ใน header ใหม่ */
@@ -55,6 +55,7 @@ nav a {
     padding: 10px 15px;
     display: block; 
     transition: background-color 0.3s;
+    white-space: nowrap; /* ป้องกันไม่ให้เมนูชื่อยาวๆ ขึ้นบรรทัดใหม่ */
 }
 
 nav a:hover {
@@ -80,7 +81,7 @@ nav a:hover {
 }
 
 .dropdown-content a {
-    color: black; /* สีตัวอักษรเป็นสีดำ */
+    color: black; 
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -172,4 +173,76 @@ footer {
     text-align: center;
     padding: 15px 0;
     margin-top: 30px;
+}
+
+/* ==================================== */
+/* **RESPONSIVE DESIGN (สำหรับมือถือ) ** */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    
+    /* 1. จัดการ Header/Title */
+    .header-content {
+        flex-direction: column; /* จัด Title และ Project Info ให้อยู่ด้านบน-ล่าง */
+        text-align: center;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8em; /* ลดขนาดชื่อเว็บไซต์ */
+        margin-bottom: 5px;
+    }
+
+    .project-info {
+        font-size: 1em; /* ลดขนาด 'จัดทำโดย 4/15' */
+    }
+
+    /* 2. จัดการ Navigation (เมนูนำทาง) */
+    nav ul {
+        flex-direction: column; /* เรียงเมนูจากซ้ายไปขวา เป็น บนลงล่าง */
+        align-items: stretch; /* ให้เมนูเต็มความกว้าง */
+    }
+
+    nav li {
+        border-bottom: 1px solid #003e80; /* เพิ่มเส้นแบ่งระหว่างเมนู */
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+    
+    /* 3. จัดการ Dropdown (ภาษาต่างประเทศ) */
+    .dropdown {
+        width: 100%; /* ให้ Dropdown เต็มความกว้าง */
+    }
+
+    .dropdown-content {
+        position: static; /* ให้ Dropdown แสดงอยู่ด้านล่างแทนที่จะลอยทับ */
+        width: 100%;
+        box-shadow: none;
+        border-top: 1px solid #003e80;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block; 
+    }
+
+    /* 4. จัดการ Product Cards (เมนูอาหาร) */
+    .products-container {
+        flex-direction: column; /* จัด Card ให้อยู่บนลงล่าง */
+        gap: 15px;
+    }
+
+    .product-card {
+        width: 100%; /* ให้ Card เต็มความกว้างหน้าจอมือถือ */
+        max-width: 400px; /* จำกัดความกว้างสูงสุด (ถ้าหน้าจอมือถือใหญ่มาก) */
+        margin: 0 auto; /* จัดกึ่งกลาง */
+    }
+    
+    /* 5. จัดการเนื้อหาหลัก (Main) */
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+    
 }
